@@ -12,23 +12,24 @@ import Card from "./Card.jsx"
 
 const Home = () => {
 
-const birds = [
-		{name:"El secretario", description:"(Sagittarius serpentarius)", img:"https://www.chapultepec.org.mx/wp-content/uploads/2020/05/aves-mas-raras-exoticas-.jpg"},
-		{name:"El azulejo de las montañas", description:"(Sialia currucoides)", img:"https://www.chapultepec.org.mx/wp-content/uploads/2020/05/aves-mas-raras-exoticas-8.jpg"},
-		{name:"El bigotudo ", description:"(Panurus biarmicus)", img:"https://www.chapultepec.org.mx/wp-content/uploads/2020/05/aves-mas-raras-exoticas-9.jpg" }
+	const birds = [
+		{ name: "El secretario", description: "(Sagittarius serpentarius)", img: "https://www.chapultepec.org.mx/wp-content/uploads/2020/05/aves-mas-raras-exoticas-.jpg" },
+		{ name: "El azulejo de las montañas", description: "(Sialia currucoides)", img: "https://www.chapultepec.org.mx/wp-content/uploads/2020/05/aves-mas-raras-exoticas-8.jpg" },
+		{ name: "El bigotudo ", description: "(Panurus biarmicus)", img: "https://www.chapultepec.org.mx/wp-content/uploads/2020/05/aves-mas-raras-exoticas-9.jpg" },
+		{ name: "Quetzal", description: "(Pharomachrus)", img:"https://desinformemonos.org/wp-content/uploads/2017/11/El-Quetzal.jpg"},
 	]
 
 	return (
 		<div>
-        <Navbar/>
-		<Banner/>
-		<div className="container">
-			<div className="row">
-		{birds.map((item, index) =>( 
-				
-				<Card  key={index} name={item.name} description={item.description} img={item.img} />
-			))}
-			</div>
+			<Navbar />
+			<Banner />
+			<div className="container-fluid text-center m-auto " >
+				<div className="row" style={{justifyContent : "space-between"}}>
+					{birds.map((item, index) => (
+
+						<Card key={index} name={item.name} description={item.description} img={item.img} />
+					))}
+				</div>
 			</div>
 		</div>
 	);
