@@ -3,3 +3,6 @@ body {
     background-color: rgb(36, 35, 35);
 }
 
+.navbar {
+    justify-content: space-between;
+}
